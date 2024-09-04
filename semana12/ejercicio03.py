@@ -119,6 +119,12 @@ temperaturas = [
         ]
     ]
 ]
+
+# Para este ejercicio el repositorio esta creado con mi correo de la U
+# pero yo uso la consola de git con mi correo personal,
+# tavez por eso vea que el repositorio tiene colaboradores que son mis correos personal y de la U
+
+
 # promodedios de las temeperaturas de cada ciudad por semana
 # creamos bucles para recorrer la matriz
 for ciudad in temperaturas:
