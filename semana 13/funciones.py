@@ -1,5 +1,5 @@
 # Autor: Felix Jimenez
-# Creamos un diccionario de ciudades y temperaturas
+# Creamos un diccionario de ciudades,semanas y temperaturas
 ciudades_temperaturas = {
     "New York": {
         "semana 1": [22, 25, 26, 24, 200],
@@ -58,7 +58,7 @@ ciudades_temperaturas = {
 temperaturas_promedio = {}
 # count = 0
 
-
+# funcion nos devuelve las ciudades y los promedios de las temperaturas
 def temperatura_promedio(ciudades_tempera):
     ciudades_index = 0
     for ciudad, semanas in ciudades_tempera.items():
@@ -67,11 +67,12 @@ def temperatura_promedio(ciudades_tempera):
             promedio_semana = sum(temperaturas) / len(temperaturas)
             temperaturas_promedio[ciudad][semana] = promedio_semana
         ciudades_index = ciudades_index + 1
-
+    # aqui devolvemos los valores, que se entregaran cuando se llame a la funcion
     return temperaturas_promedio, ciudades_index
-
+# hacemos un llamado de la funcion temperatura_promedio
 loco = temperatura_promedio(ciudades_temperaturas)
 
+# def jaja nos da el conteo de el total de ciudaddes que hay y el numero que se ingresa por teclado
 def jaja(locaso):
     option_number = 0
     print("Eligue una ciudad con un numero")
@@ -80,11 +81,13 @@ def jaja(locaso):
         cont = cont + 1
         print(cont, ". ", citys[0])
     option_number = int(input("Eligue una ciudad:__ "))
+    # aqui retornamos el numero que se ingresa por teclado
     return option_number-1
 
+# esta variable usamos para guardar el nombre de la ciudad que fue elejida
 city_selecte = {}
 
-
+# def dada se uso para obtener el nombre de la ciudad elejida en el diccionario que ya habiamos tenido al llamar a la funcion temperatura_promedio
 def dada(bla, contador):
     cont = 0
     for lo in bla[0].items():
@@ -97,7 +100,7 @@ def dada(bla, contador):
 
 citys_menu = {}
 
-
+# def menu se usa para comparar e imprimir los valores de una ciudad especifica ya seleccionada
 def menu(blablabla):
     for citys, temperatura in loco[0].items():
         for semana in temperatura.items():
@@ -107,25 +110,10 @@ def menu(blablabla):
                     citys} tiene la temperatura de: {semana}°C")
 
 
-
 # estaba cansao y no estuve creativo con los nombres de  variables y funciones
+# en chale hacemos alacenamos el valor que nos devuelve la funcion dada que a su vez la
+# funcion dada ya recive como parametro la funcion jaja y tambien un llamada ya previo
+# de la funcion temperatura_promedio que fue almacenado en la variable loco
 chale = dada(loco, jaja(loco))
+# llamamos a la funcion menu que de menu no tiene nada pero imprime los resultados jeje
 menu(chale)
-
-
-#     for ciudad, semana, temperaturas in ciudades_temperaturas.items():
-#         promedio = sum(temperaturas) / len(temperaturas)
-#         temperaturas_promedio[ciudad] = promedio
-#         print(temperaturas_promedio[ciudad])
-
-#     return temperaturas_promedio
-
-# Llamamos a la función para calcular las temperaturas promedio
-# temperaturas_promedio = temperatura_promedio(ciudades_temperaturas)
-
-# # Mostramos los resultados
-# print("Temperaturas Promedio por Ciudad:")
-# for ciudad, promedio in temperaturas_promedio.items():
-#     print(f"{ciudad}: {promedio:.2f}°C")
-
-# print("Temperaturas Promedio por Ciudad:", temperaturas_promedio)
